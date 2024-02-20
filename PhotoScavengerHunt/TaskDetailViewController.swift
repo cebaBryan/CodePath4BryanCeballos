@@ -34,9 +34,7 @@ class TaskDetailViewController: UIViewController, UIImagePickerControllerDelegat
         completionImageView.image = taskToShow.isCompleted ? UIImage(named: "checkmark") : UIImage(named: "circle")
     }
     
-    /*@IBAction func attachPictureTapped(_ sender: UIButton) {
-        presentPhotoPicker()
-    }*/
+    
     
     @IBAction func attachPictureTapped(_ sender: UIButton) {
         let picker = UIImagePickerController()
@@ -77,7 +75,6 @@ class TaskDetailViewController: UIViewController, UIImagePickerControllerDelegat
             }
         case .denied, .restricted:
             print("Camera access denied or restricted")
-            // Optionally, prompt the user to enable camera access from settings
             if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
                 UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
             }
@@ -119,20 +116,16 @@ class TaskDetailViewController: UIViewController, UIImagePickerControllerDelegat
             AVCaptureDevice.requestAccess(for: .video) { granted in
                 DispatchQueue.main.async {
                     if granted {
-                        // Permission granted, show the photo picker
                         self.presentPhotoPicker()
                     } else {
-                        // Permission denied, handle accordingly
                         print("Camera access denied.")
-                        // You can show an alert informing the user that camera access is required.
+                        
                     }
                 }
             }
             
         case .denied, .restricted:
-            // Permission denied or restricted, handle accordingly
             print("Camera access denied or restricted.")
-            // You can show an alert informing the user that camera access is required.
             
         @unknown default:
             print("Unknown authorization status.")
@@ -140,20 +133,14 @@ class TaskDetailViewController: UIViewController, UIImagePickerControllerDelegat
     }
 
     
-    // UIImagePickerControllerDelegate methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true)
         guard let image = info[.originalImage] as? UIImage else {
             print("No image selected")
             return
         }
-        
-        // Update the UI with the selected image
         completionImageView.image = UIImage(named: "checkmark")
-        // Update the task status
         updateTaskAsCompleted()
-        
-        // Handle displaying the selected image on the map
         if let assetURL = info[.phAsset] as? PHAsset {
             let location = assetURL.location
             if let location = location {
