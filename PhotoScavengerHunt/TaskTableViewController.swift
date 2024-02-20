@@ -42,7 +42,7 @@ class TasksTableViewController: UITableViewController {
            let indexPath = tableView.indexPathForSelectedRow {
             let selectedTask = tasks[indexPath.row]
             destinationVC.task = selectedTask
-            destinationVC.delegate = self // Set the delegate
+            destinationVC.delegate = self
         }
     }
 
