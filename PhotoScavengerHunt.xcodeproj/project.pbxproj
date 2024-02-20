@@ -16,6 +16,10 @@
 		53B8747B2B840B0C00F3909C /* PhotoScavengerHuntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8747A2B840B0C00F3909C /* PhotoScavengerHuntTests.swift */; };
 		53B874852B840B0C00F3909C /* PhotoScavengerHuntUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B874842B840B0C00F3909C /* PhotoScavengerHuntUITests.swift */; };
 		53B874872B840B0C00F3909C /* PhotoScavengerHuntUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B874862B840B0C00F3909C /* PhotoScavengerHuntUITestsLaunchTests.swift */; };
+		53B874942B84130300F3909C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B874932B84130300F3909C /* Task.swift */; };
+		53B874962B84132600F3909C /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B874952B84132600F3909C /* TaskTableViewCell.swift */; };
+		53B874982B84133A00F3909C /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B874972B84133A00F3909C /* TaskDetailViewController.swift */; };
+		53B8749A2B8415C600F3909C /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B874992B8415C600F3909C /* TaskTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		53B874802B840B0C00F3909C /* PhotoScavengerHuntUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoScavengerHuntUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B874842B840B0C00F3909C /* PhotoScavengerHuntUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScavengerHuntUITests.swift; sourceTree = "<group>"; };
 		53B874862B840B0C00F3909C /* PhotoScavengerHuntUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScavengerHuntUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		53B874932B84130300F3909C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		53B874952B84132600F3909C /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		53B874972B84133A00F3909C /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		53B874992B8415C600F3909C /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				53B8746C2B840B0B00F3909C /* Assets.xcassets */,
 				53B8746E2B840B0B00F3909C /* LaunchScreen.storyboard */,
 				53B874712B840B0B00F3909C /* Info.plist */,
+				53B874932B84130300F3909C /* Task.swift */,
+				53B874952B84132600F3909C /* TaskTableViewCell.swift */,
+				53B874972B84133A00F3909C /* TaskDetailViewController.swift */,
+				53B874992B8415C600F3909C /* TaskTableViewController.swift */,
 			);
 			path = PhotoScavengerHunt;
 			sourceTree = "<group>";
@@ -258,8 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B874982B84133A00F3909C /* TaskDetailViewController.swift in Sources */,
+				53B874942B84130300F3909C /* Task.swift in Sources */,
 				53B874682B840B0500F3909C /* ViewController.swift in Sources */,
+				53B874962B84132600F3909C /* TaskTableViewCell.swift in Sources */,
 				53B874642B840B0500F3909C /* AppDelegate.swift in Sources */,
+				53B8749A2B8415C600F3909C /* TaskTableViewController.swift in Sources */,
 				53B874662B840B0500F3909C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +460,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoScavengerHunt/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Select a photo to attach to your task";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -471,6 +489,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoScavengerHunt/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Select a photo to attach to your task";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
